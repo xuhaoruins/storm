@@ -40,7 +40,7 @@ def main(args):
     ModelClass = OpenAIModel if os.getenv('OPENAI_API_TYPE') == 'openai' else AzureOpenAIModel
     # If you are using Azure service, make sure the model name matches your own deployed model name.
     # The default name here is only used for demonstration and may not match your case.
-    gpt_35_model_name = 'gpt-3.5-turbo' if os.getenv('OPENAI_API_TYPE') == 'openai' else 'gpt-35-turbo'
+    gpt_35_model_name = 'gpt-4o-mini' if os.getenv('OPENAI_API_TYPE') == 'openai' else 'gpt-4o-mini'
     gpt_4_model_name = 'gpt-4o'
     if os.getenv('OPENAI_API_TYPE') == 'azure':
         openai_kwargs['api_base'] = os.getenv('AZURE_API_BASE')
